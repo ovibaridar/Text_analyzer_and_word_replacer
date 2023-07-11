@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Chaenger</title>
+</head>
+<body>
+<a href="{% url 'home' %}">Text Analyser</a>
+<a href="{% url 'changer' %}">Word changer</a>
+<h3>Word changer</h3>
+<h5 style="color:red">{{error}}</h5>
+<form action="/wordchanger" method="get">
+    <label>Enter your sentance here</label><br>
+    <textarea name="sentance" style="width: 856px; height: 312px;">{{sentance}}</textarea><br><br>
+    <label>Enter target word or sentance</label><br>
+    <input value="{{target}}" name="target"><br><br>
+    <label>Enter change word sentance</label><br>
+    <input value="{{Change}}" name="Change"><br><br><br>
+    <button type="submit">Submit</button>
+    <br>
+</form>
+</body>
+</html>
