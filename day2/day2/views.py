@@ -17,8 +17,8 @@ def analysis2(request):
 
 
 def analysis(request):
-    data = request.GET.get('mytext', 'default')
-    chak = request.GET.get('chak', 'off')
+    data = request.POST.get('mytext', 'default')
+    chak = request.POST.get('chak', 'off')
     if data == "":
         error = "Please enter your data"
         pramiter = {"error": error}
@@ -78,9 +78,9 @@ def analysis(request):
 
 
 def wordchanger(request):
-    sentance = request.GET.get('sentance', "defualt")
-    target = request.GET.get('target', "target")
-    Change = request.GET.get('Change', "Change")
+    sentance = request.POST.get('sentance', "defualt")
+    target = request.POST.get('target', "target")
+    Change = request.POST.get('Change', "Change")
     if len(sentance) == 0 or len(target) == 0 or len(Change) == 0:
         error = "Enter all inputs please"
         parametar = {'sentance': sentance, 'target': target, 'Change': Change, 'error': error}

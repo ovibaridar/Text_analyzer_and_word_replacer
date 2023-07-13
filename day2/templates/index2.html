@@ -38,7 +38,7 @@
 <div class="d-flex  mt-5 justify-content-center"><p class="fw-bolder fs-5">Analyze your text and word</p></div>
 
 <div class="container mt-4">
-    <form action="/analysis" method="get" >
+    <form action="/analysis" method="post" >{% csrf_token %}
         <div class="form-floating">
         <textarea name="mytext" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
                   style="height: 400px"></textarea>
