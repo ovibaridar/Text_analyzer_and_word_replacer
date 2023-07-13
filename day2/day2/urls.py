@@ -20,8 +20,11 @@ from .import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
+    path('', views.home2, name='home2'),
     path('analysis', views.analysis, name='analysis'),
     path('changer', views.changer, name='changer'),
+    path('changer2', views.changer2, name='changer2'),
+    path('home', views.home, name='home'),
+    path('analysis2', views.analysis2, name='analysis2'),
     path('wordchanger', views.wordchanger, name='wordchanger')
 ]
